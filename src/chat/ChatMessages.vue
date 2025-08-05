@@ -34,10 +34,10 @@ const props = defineProps<Props>();
 
 const chatRef = ref<HTMLDivElement | null>(null);
 
-watch(props.messages, () => {
+watch(props, () => {
   //El tiempo es para que le de tiempo a redendizar
   setTimeout(() => {
-    console.log('mensaje cambio', props.messages.length);
+    //console.log('mensaje cambio', props.messages.length);
     chatRef.value?.scrollTo({
       top: chatRef.value.scrollHeight,
       behavior: 'smooth',
